@@ -1,0 +1,22 @@
+JQuery ES6 js
+1.  $(".userinput").on("click", () => {
+	
+	});
+
+2. const userInputs = $("#Block1").find(".userInput");
+
+3. const popup = $("#PopupDIV").toggle("fade");
+
+SQL
+1.  SELECT * FROM Table1 t1 
+	LEFT JOIN Table2 t2 on t1.Id = t2.EntityID
+	WHERE t2.EntityID is null
+
+2. 
+  SELECT p.CatalogID, SUM(p.PositionQuantity * p.PositionPrice) as СуммаЗакупки
+  FROM Table1 p GROUP BY p.CatalogID 
+
+
+3. 
+  SELECT p.CatalogID, SUM(p.PositionQuantity * p.PositionPrice) as СуммаЗакупки
+  FROM Table1 p WHERE p.RequestID = 1 GROUP BY p.CatalogID HAVING (SUM(p.PositionQuantity * p.PositionPrice)) > 100000
